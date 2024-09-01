@@ -12,22 +12,6 @@ import jakarta.persistence.Column;
 @Entity 
 @Table(name="employees_table")
 public class Employee {
-
-	
-	public Employee() {}
-	
-	public Employee(String fname, String lname, String email, long salary, String department, String designation,
-			LocalDate joiningDate) {
-		super();
-		this.fname = fname;
-		this.lname = lname;
-		this.email = email;
-		this.salary = salary;
-		this.department = department;
-		this.designation = designation;
-		this.joiningDate = joiningDate;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -52,6 +36,37 @@ public class Employee {
 	
 	@Column(name="jd")
 	private LocalDate joiningDate;
+	
+	/*
+	"fname":"Kshitij",
+	"lname":Kanse",
+	"email":"kshitijk@gmail.com",
+	"salary":128000,
+	"department":"IT",
+	"designation":"Devloper",
+	"joiningDate":"31 Aug 2024"
+	
+	
+	
+	*/
+	
+	public Employee() {
+		
+	}
+	
+	public Employee(String fname, String lname, String email, long salary, String department, String designation,
+			LocalDate joiningDate) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
+		this.salary = salary;
+		this.department = department;
+		this.designation = designation;
+		this.joiningDate = joiningDate;
+	}
+//	
+	
 	
 	public long getId() {
 		return id;
